@@ -62,6 +62,40 @@ input, textarea{
 
 <body>
 
+<!-- Step 1: Big Banner Header Start -->
+<section id="banner" style="
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1523848309072-c199db53f137?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+">
+  <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+  ">
+    <h1 style="font-size: 3rem; margin-bottom: 20px;">JMC Builders</h1>
+    <p style="font-size: 1.5rem; margin-bottom: 30px;">Quality Minerals Worldwide</p>
+    <a href="#quote-form" style="
+        padding: 12px 30px;
+        background-color: #ffcc00;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    ">Request a Quote</a>
+  </div>
+</section>
+<!-- Step 1: Big Banner Header End -->
+
 <header>
 <h1>JMC Builders & Mining</h1>
 <p>Construction • Mining • Mineral Supply • Worldwide Delivery</p>
@@ -86,11 +120,9 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 <h2>Contact Us</h2>
 
 <a href="mailto:jmcbuilders12@mail.com" class="contact-btn email">Email Us</a>
-
-<!-- IMPORTANT: replace 093104868105 with your number in international format -->
-<!-- Example: if your country code is +63 it should be 6393104868105 -->
 <a href="https://wa.me/639310486810" target="_blank" class="contact-btn whatsapp">Chat on WhatsApp</a>
-<h2>Request a Quote</h2>
+
+<h2 id="quote-form">Request a Quote</h2>
 
 <form action="mailto:jmcbuilders12@mail.com" method="post" enctype="text/plain">
 <input type="text" name="Name" placeholder="Your Name" required>
@@ -101,8 +133,8 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 
 </section>
 
-</body<!-- Floating WhatsApp Button Start -->
-<a href="https://wa.me/15551234567" target="_blank" style="
+<!-- Floating WhatsApp Button Start -->
+<a href="https://wa.me/639310486810" target="_blank" style="
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -121,5 +153,12 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
 </a>
-<!-- Floating WhatsApp Button End -->>
+<!-- Floating WhatsApp Button End -->
+
+</body>
 </html>
+
+
+
+
+
