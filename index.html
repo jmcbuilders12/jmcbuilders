@@ -8,63 +8,109 @@
 <meta name="keywords" content="JMC Builders, mining, minerals, gold ore, copper ore, iron ore, manganese, global mineral supplier, construction materials">
 <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 <style>
-body{
+body {
     font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f6f8;
+    margin: 0;
+    background: #f4f6f8;
 }
-header{
-    background:#2c3e50;
-    color:white;
-    padding:20px;
-    text-align:center;
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
-section{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    margin-top:20px;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+section {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-h2{
-    color:#2c3e50;
+h2 {
+    color: #2c3e50;
 }
-button{
-    background:#2c3e50;
-    color:white;
-    padding:12px 18px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+button {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-button:hover{
-    background:#1a252f;
+button:hover {
+    background: #1a252f;
 }
-.contact-btn{
-    display:inline-block;
-    padding:12px 20px;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    margin:5px;
+.contact-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 5px;
 }
-.email{ background:#2c3e50; }
-.whatsapp{ background:#25D366; }
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin:8px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
+.email { background: #2c3e50; }
+.whatsapp { background: #25D366; }
+
+/* Form Styling */
+form#quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+form#quoteForm input,
+form#quoteForm textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+form#quoteForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+form#quoteForm button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+form#quoteForm button:hover {
+    background-color: #e6b800;
+}
+
+/* Success message fade-in */
+#success-message {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+#success-message.show {
+    display: block;
+    opacity: 1;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Step 1: Big Banner Header Start -->
+<!-- Banner -->
 <section id="banner" style="
     position: relative;
     height: 80vh;
@@ -96,9 +142,8 @@ input, textarea{
     ">Request a Quote</a>
   </div>
 </section>
-<!-- Step 1 End -->
 
-<!-- Step 3: Trusted Supplier Badge Start -->
+<!-- Trusted Supplier Badge -->
 <section style="
     background-color: #ffcc00;
     color: #000;
@@ -110,7 +155,6 @@ input, textarea{
 ">
     ✅ Trusted Supplier of Minerals Worldwide
 </section>
-<!-- Step 3 End -->
 
 <header>
 <h1>JMC Builders & Mining</h1>
@@ -125,19 +169,16 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 </p>
 </section>
 
-<!-- Step 4: Mining Operations Photo Section Start -->
 <section style="max-width:1000px; margin:40px auto; text-align:center;">
-  <h2>Our Mining Operations</h2>
-  <p>High-quality mineral extraction and supply operations</p>
-  
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top:20px;">
+<h2>Our Mining Operations</h2>
+<p>High-quality mineral extraction and supply operations</p>
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top:20px;">
     <img src="https://images.unsplash.com/photo-1595691452827-6d1c0e71b427?auto=format&fit=crop&w=800&q=80" alt="Mining Site 1" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
     <img src="https://images.unsplash.com/photo-1590487982670-1c7e3c3a1c84?auto=format&fit=crop&w=800&q=80" alt="Mining Site 2" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
     <img src="https://images.unsplash.com/photo-1590487982667-80403b7c30f0?auto=format&fit=crop&w=800&q=80" alt="Mining Site 3" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
     <img src="https://images.unsplash.com/photo-1581091012184-f19894ffed54?auto=format&fit=crop&w=800&q=80" alt="Mining Site 4" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
-  </div>
+</div>
 </section>
-<!-- Step 4 End -->
 
 <section>
 <h2>Minerals We Supply</h2>
@@ -153,63 +194,53 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 <section>
 <h2>Contact Us</h2>
 
-<!-- Contact buttons -->
-<a href="mailto:jmcbuilders12@mail.com" class="contact-btn email">Email Us</a>
+<a href="mailto:jmcbuilders12@gmail.com" class="contact-btn email">Email Us</a>
 <a href="https://wa.me/639310486810" target="_blank" class="contact-btn whatsapp">Chat on WhatsApp</a>
 
-<!-- Request a Quote Form -->
 <h2 id="quote-form" style="margin-top:30px;">Request a Quote</h2>
 <form id="quoteForm" action="https://formspree.io/f/mpqjbdll" method="POST">
-  <input type="text" id="name" name="name" placeholder="Your Name" required>
-  <input type="email" id="email" name="email" placeholder="Your Email" required>
-  <input type="text" id="company" name="company" placeholder="Company Name (optional)">
-  <textarea id="message" name="message" placeholder="Tell us what minerals you need..." required></textarea>
-  <button type="submit">Send Message</button>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <input type="text" id="company" name="company" placeholder="Company Name (optional)">
+    <textarea id="message" name="message" placeholder="Tell us what minerals you need..." required></textarea>
+    <button type="submit">Send Message</button>
 </form>
 
-<div id="success-message" style="
-    display:none;
-    margin-top:15px;
-    padding:15px;
-    text-align:center;
-    background-color:#d4edda;
-    color:#155724;
-    border-radius:8px;
-    font-weight:bold;
-">
-  ✅ Thank you! Your request has been sent.
+<div id="success-message">
+    ✅ Thank you! Your request has been sent.
 </div>
+</section>
 
 <script>
 const form = document.getElementById('quoteForm');
 const successMessage = document.getElementById('success-message');
 
 form.addEventListener('submit', function(event) {
-  event.preventDefault(); 
-  const formData = new FormData(form);
+    event.preventDefault(); 
+    const formData = new FormData(form);
 
-  fetch(form.action, {
-    method: form.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' },
-  })
-  .then(response => {
-    if (response.ok) {
-      successMessage.style.display = 'block'; 
-      form.reset(); 
-      setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
-    } else {
-      alert('Oops! There was a problem submitting your request.');
-    }
-  })
-  .catch(error => {
-    alert('Oops! There was a problem submitting your request.');
-    console.error(error);
-  });
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+    })
+    .then(response => {
+        if (response.ok) {
+            successMessage.classList.add('show'); 
+            form.reset(); 
+            setTimeout(() => { successMessage.classList.remove('show'); }, 5000);
+        } else {
+            alert('Oops! There was a problem submitting your request.');
+        }
+    })
+    .catch(error => {
+        alert('Oops! There was a problem submitting your request.');
+        console.error(error);
+    });
 });
 </script>
 
-<!-- Floating WhatsApp Button Start -->
+<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/639310486810" target="_blank" style="
     position: fixed;
     bottom: 20px;
@@ -227,13 +258,19 @@ form.addEventListener('submit', function(event) {
     z-index: 1000;
     transition: transform 0.3s;
 " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
 </a>
-<!-- Floating WhatsApp Button End -->
 
 </body>
 </html>
 
+
+
+
+
+ 
+  
+  
 
 
 
