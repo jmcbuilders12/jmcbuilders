@@ -1,113 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 20px;
-    }
-    form {
-      background: #fff;
-      padding: 20px;
-      max-width: 500px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background: #45a049;
-    }
-    .contact-links {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .contact-links a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JMC Builders & Mining – Quality Minerals Worldwide</title>
+<meta name="description" content="JMC Builders & Mining is a trusted global supplier of gold, copper, iron, and manganese ores. Reliable sourcing, competitive pricing, and worldwide delivery.">
+<meta name="keywords" content="JMC Builders, mining, minerals, gold ore, copper ore, iron ore, manganese, global mineral supplier, construction materials">
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f8;
+}
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+section{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    margin-top:20px;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+h2{
+    color:#2c3e50;
+}
+button{
+    background:#2c3e50;
+    color:white;
+    padding:12px 18px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:#1a252f;
+}
+.contact-btn{
+    display:inline-block;
+    padding:12px 20px;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    margin:5px;
+}
+.email{ background:#2c3e50; }
+.whatsapp{ background:#25D366; }
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+</style>
 </head>
+
 <body>
 
-  <form id="contactForm" onsubmit="sendEmail(event)">
-    <h2>Contact Us</h2>
-
-    <label for="user_name">Your Name</label>
-    <input type="text" id="user_name" name="user_name" placeholder="Enter your name" required>
-
-    <label for="user_email">Your Email</label>
-    <input type="email" id="user_email" name="user_email" placeholder="Enter your email" required>
-
-    <label for="company">Company (Optional)</label>
-    <input type="text" id="company" name="company" placeholder="Enter your company name">
-
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" placeholder="Tell us what minerals you need..." rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <div class="contact-links">
-    <a href="mailto:your-email@example.com" target="_blank">Email Us</a>
-    <a href="https://wa.me/1234567890" target="_blank">Chat on WhatsApp</a>
-    <a href="mailto:your-email@example.com?subject=Request%20a%20Quote">Request a Quote</a>
+<!-- Step 1: Big Banner Header Start -->
+<section id="banner" style="
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1523848309072-c199db53f137?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+">
+  <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+  ">
+    <h1 style="font-size: 3rem; margin-bottom: 20px;">JMC Builders</h1>
+    <p style="font-size: 1.5rem; margin-bottom: 30px;">Quality Minerals Worldwide</p>
+    <a href="#quote-form" style="
+        padding: 12px 30px;
+        background-color: #ffcc00;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    ">Request a Quote</a>
   </div>
+</section>
+<!-- Step 1 End -->
 
-  <script>
-    function sendEmail(event) {
-      event.preventDefault(); // prevent form from refreshing
+<!-- Step 3: Trusted Supplier Badge Start -->
+<section style="
+    background-color: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+">
+    ✅ Trusted Supplier of Minerals Worldwide
+</section>
+<!-- Step 3 End -->
 
-      const name = document.getElementById('user_name').value;
-      const email = document.getElementById('user_email').value;
-      const company = document.getElementById('company').value;
-      const message = document.getElementById('message').value;
+<header>
+<h1>JMC Builders & Mining</h1>
+<p>Construction • Mining • Mineral Supply • Worldwide Delivery</p>
+</header>
 
-      // Build email body
-      const subject = encodeURIComponent('Contact Form Submission');
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nMessage:\n${message}`
-      );
+<section>
+<h2>About Our Company</h2>
+<p>
+JMC Builders & Mining is an international supplier of mineral ores and construction materials.
+We provide reliable sourcing, competitive pricing, and global delivery for industrial buyers.
+</p>
+</section>
 
-      // Open default email client
-      window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+<!-- Step 4: Mining Operations Photo Section Start -->
+<section style="max-width:1000px; margin:40px auto; text-align:center;">
+  <h2>Our Mining Operations</h2>
+  <p>High-quality mineral extraction and supply operations</p>
+  
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top:20px;">
+    <img src="https://images.unsplash.com/photo-1595691452827-6d1c0e71b427?auto=format&fit=crop&w=800&q=80" alt="Mining Site 1" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+    <img src="https://images.unsplash.com/photo-1590487982670-1c7e3c3a1c84?auto=format&fit=crop&w=800&q=80" alt="Mining Site 2" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+    <img src="https://images.unsplash.com/photo-1590487982667-80403b7c30f0?auto=format&fit=crop&w=800&q=80" alt="Mining Site 3" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+    <img src="https://images.unsplash.com/photo-1581091012184-f19894ffed54?auto=format&fit=crop&w=800&q=80" alt="Mining Site 4" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+  </div>
+</section>
+<!-- Step 4 End -->
 
-      // Optionally, show a confirmation alert
-      alert('Your message is ready to send via your email client!');
-    }
-  </script>
+<section>
+<h2>Minerals We Supply</h2>
+<ul>
+<li>Gold Ore</li>
+<li>Copper Ore</li>
+<li>Iron Ore</li>
+<li>Manganese</li>
+<li>Other minerals on request</li>
+</ul>
+</section>
+
+<section>
+<h2>Contact Us</h2>
+<a href="mailto:jmcbuilders12@mail.com" class="contact-btn email">Email Us</a>
+<a href="https://wa.me/639310486810" target="_blank" class="contact-btn whatsapp">Chat on WhatsApp</a>
+
+<h2 id="quote-form">Request a Quote</h2>
+<form action="mailto:jmcbuilders12@mail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<!-- Floating WhatsApp Button Start -->
+<a href="https://wa.me/639310486810" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; height: 30px;">
+</a>
+<!-- Floating WhatsApp Button End -->
 
 </body>
 </html>
+
+  
