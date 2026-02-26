@@ -151,18 +151,64 @@ We provide reliable sourcing, competitive pricing, and global delivery for indus
 </section>
 
 <section>
-<h2>Contact Us</h2>
-<a href="mailto:jmcbuilders12@mail.com" class="contact-btn email">Email Us</a>
-<a href="https://wa.me/639310486810" target="_blank" class="contact-btn whatsapp">Chat on WhatsApp</a>
+  <h2>Contact Us</h2>
 
-<h2 id="quote-form">Request a Quote</h2>
-<form action="mailto:jmcbuilders12@mail.com" method="post" enctype="text/plain">
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<textarea name="Message" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
+  <!-- Contact buttons -->
+  <a href="mailto:jmcbuilders12@mail.com" class="contact-btn email">Email Us</a>
+  <a href="https://wa.me/639310486810" target="_blank" class="contact-btn whatsapp">Chat on WhatsApp</a>
+
+  <!-- Request a Quote Form -->
+  <h2 id="quote-form" style="margin-top:30px;">Request a Quote</h2>
+  <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <input type="text" id="company" name="company" placeholder="Company Name (optional)">
+    <textarea id="message" name="message" placeholder="Tell us what minerals you need..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="success-message" style="
+      display:none;
+      margin-top:15px;
+      padding:15px;
+      text-align:center;
+      background-color:#d4edda;
+      color:#155724;
+      border-radius:8px;
+      font-weight:bold;
+  ">
+    ✅ Thank you! Your request has been sent.
+  </div>
 </section>
+
+<script>
+const form = document.getElementById('quoteForm');
+const successMessage = document.getElementById('success-message');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' },
+  })
+  .then(response => {
+    if (response.ok) {
+      successMessage.style.display = 'block'; 
+      form.reset(); 
+      setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
+    } else {
+      alert('Oops! There was a problem submitting your request.');
+    }
+  })
+  .catch(error => {
+    alert('Oops! There was a problem submitting your request.');
+    console.error(error);
+  });
+});
+</script>
 
 <!-- Floating WhatsApp Button Start -->
 <a href="https://wa.me/639310486810" target="_blank" style="
